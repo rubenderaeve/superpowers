@@ -44,6 +44,8 @@ Has the user already indicated their worktree preference in your instructions? I
 
 Honor any existing declared preference without asking. If the user declines consent, work in place and skip to Step 2.
 
+**Build-bound checkout:** If the configured build compiles this directory, do not add a second worktree of the branch that must be checked out here. Git allows a branch in only one worktree, so that worktree would not be what the build compiles. Create the feature branch in this checkout. If a parent repo is on another branch, do not commit there.
+
 ## Step 1: Create Isolated Workspace
 
 **You have two mechanisms. Try them in this order.**
